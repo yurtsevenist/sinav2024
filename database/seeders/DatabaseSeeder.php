@@ -14,6 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $this->call([
+            UserSeeder::class,
+            CategorySeeder::class,
+            ProductSeeder::class,
+            PaymentMethodSeeder::class,
+            BankAccountSeeder::class,
+            AdminSeeder::class,
+            RoleAndPermissionSeeder::class,
+            SettingsSeeder::class,
+        ]);
     }
 }
